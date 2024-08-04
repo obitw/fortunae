@@ -1,0 +1,764 @@
+/* Réinitialisation des marges et des espacements par défaut */
+html,body,div,p,h1,h2,h3,ul,li
+{
+  margin: 0;
+  padding: 0;
+}
+
+/* Appliquer une police de base et une taille de texte */
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    background-image: url(../ressource/img/ArrierePlan5.jpg);
+    background-position: center;
+    background-size: 100%;
+    overflow-x: hidden; /* Supprimer la barre de défilement horizontale pour certaines animations */
+}
+
+body::after {
+    content: "";
+    background: inherit;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+.boutonMise button, .boutonJouer button {
+    box-shadow: 10px 10px 10px rgb(0, 0, 0); /* Ajout de cette ligne */
+}
+
+/* Style pour fixer le pied de page en bas de page */
+footer{
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 70px; /* Hauteur du pied de page */
+    background: linear-gradient(to right, #b69d13, #000, #b69d13); /* Dégradé de fond du pied de page */
+    color: #ffffff; /* Couleur du texte du pied de page */
+    padding: 10px; /* Espacement intérieur du pied de page */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.5);
+    font-family: "Casino";
+    text-align: center;
+}
+
+header, footer {
+  background: linear-gradient(to right, #b69d13, #000, #b69d13); /* Dégradé de fond de l'en-tête */
+  color: #ffffff; /* Couleur du texte dans l'en-tête */
+  padding: 10px; /* Espacement intérieur de l'en-tête */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 0, 0, 0.5);
+  font-family: "Casino";
+}
+
+.navBar a:hover,
+.submenu-burger a:hover{
+  color: #b69d13;
+  transition: 0.5s;
+}
+
+.navBar{
+    display :flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    height: 54px;
+}
+
+.navGauche{
+    justify-content: space-between;
+}
+
+.burger {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.burger:hover .submenu-burger {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+img[alt="burger"]{
+    width: 40px;
+    height: auto;
+}
+.submenu-burger {
+    padding: 5px;
+    top: 40px;
+    right: 0;
+    position: absolute;
+    background-color: #92842a;
+    display: none;
+    box-shadow: 1px 5px 10px 0 rgba(0,0,0,.8);
+}
+.submenu-burger a {
+    text-decoration: none;
+    color : white;
+    padding: 1rem;
+    display: block;
+}
+
+/* Style pour la barre de navigation (nav)
+nav div{
+  list-style-type: none; Supprimer les puces de la liste
+}
+*/
+.navBar a {
+    text-decoration: none;
+}
+
+nav div {
+  display: inline; /* Afficher les éléments de la liste en ligne */
+}
+
+.navSousGauche div,
+.navDroite div,
+.logoNav {
+    margin-right: 20px; /* Espacement entre les éléments de la liste */
+}
+
+
+nav a {
+  text-decoration: none; /* Supprimer la soulignement des liens */
+  color: #fff; /* Couleur du texte des liens */
+}
+
+@media screen and (max-width:900px) {
+    .navDroite{
+        display: none;
+    }
+    .navSousGauche{
+        display: none;
+    }
+    .burger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Style pour le contenu principal (main) */
+main {
+  margin: 20px; /* Espacement autour du contenu principal */
+}
+
+.alert{
+    position: inherit;
+}
+
+@font-face {
+  font-family: "Casino";
+  src: url(../ressource/style/font/Casino.ttf); /*Oui C'est bien le bon lien*/
+}
+
+#logo {
+  width: 50px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.social-media img {
+  width: 25px;
+}
+
+@font-face {
+  font-family: "CasinoItalic";
+  src: url(../ressource/style/font/CasinoFlatShadow-Italic.ttf);
+}
+
+.about-us{
+    font-family: "LibelSuitRg-Regular";
+}
+
+
+@font-face {
+    font-family: 'Acme';
+    src: url(../ressource/style/font/Acme-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Odibee';
+    src: url(../ressource/style/font/OdibeeSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Nova';
+    src: url(../ressource/style/font2/SeasideResortNF.ttf);
+}
+
+.containerTitre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 1%;
+}
+
+.titre {
+    width: 30%;
+    height: 7%;
+    color: navajowhite;
+    font-size: 300%;
+    font-family: 'Acme';
+
+}
+
+.premierNeon {
+    position: absolute;
+    width: 100%;
+    height: 1%;
+    background-color: #FFD700;
+    box-shadow: 0 0 10px #FFD700;
+    margin: 10px 0;
+}
+
+.containerJeu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 95%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.58);
+    border-radius: 10px;
+}
+
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 3px solid #FFD700;
+    box-shadow: 0 0 10px #FFD700;
+    border-radius: 10px;
+}
+
+.item {
+    width: fit-content;
+    height: 100%;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    margin-right: 10px;
+    color: #FFD700;
+    font-family: 'Nova';
+    font-size: 300%;
+}
+
+.itemEcrit {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    margin-right: 20px;
+    color: #FFD700;
+    font-family: 'Nova';
+    font-size: 300%;
+}
+
+
+.emplacement img {
+    width: 200px;
+    height: 200px;
+    align-items: center;
+
+}
+
+
+.machine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emplacement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 165px;
+    height: 150px;
+    background-color: #948430;
+    box-shadow: 0 0 10px black;
+    margin: 15px;
+}
+
+.colonne {
+    display: inline-block;
+    width: 195px;
+    height: 515px;
+    border: 1px solid #FFD700;
+    box-shadow: 0 0 10px #FFD700;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.colonne img {
+    width: 90%;
+    height: 90%;
+}
+
+.containerBouton {
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    align-items: center;
+}
+
+.containerMise, .containerParametre{
+    display: flex;
+    flex-direction: row;
+}
+
+.containerBoutonMise {
+    display: flex;
+    flex-direction: row;
+}
+
+.containerMisePlus, .containerMiseMoins {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.boutonMise {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 1px;
+    text-align: center;
+}
+
+.boutonMise button {
+    background-color: #FFD700;
+    width: 100%;
+    color: black;
+    border: none;
+    padding: 14px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Odibee';
+}
+
+.boutonMise button:hover {
+    background-color: #FFD700;
+    box-shadow: 0 0 10px #FFD700;
+    width: fit-content;
+    color: white;
+    border: none;
+    padding: 14px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Odibee';
+}
+
+.boutonJouer {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: center;
+}
+
+.boutonJouer button {
+    background-color: #FFD700;
+    width: 170px;
+    color: black;
+    border: none;
+    padding: 14px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Odibee';
+}
+
+.boutonJouer button:hover {
+    background-color: #FFD700;
+    box-shadow: 0 0 10px #FFD700;
+    width: 170px;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Odibee';
+}
+
+.miser{
+    background-color: #FFD700;
+    width: fit-content;
+    color: black;
+    border: none;
+    margin: 1px;
+    padding: 14px 15px;
+    font-size: 20px;
+    cursor: default;
+    font-family: 'Odibee';
+}
+
+
+
+.espace{
+    height: 5VH;
+}
+
+.information{
+    display: flex;
+    align-items: end;
+    margin-right: 30px;
+}
+
+.sonBackground{
+    display: flex;
+    align-items: end;
+    background-color: rgba(255, 215, 0, 0.58);
+    border-radius: 10px;
+}
+
+
+.sonBackgroundButton{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.info {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.border-red {
+    animation: red-border 1s;
+}
+
+@keyframes red-border {
+    0% {
+        border-color: #FFD700;
+        box-shadow: #FFD700;
+    }
+    25% {
+        border-color: orange;
+        box-shadow: orange;
+    }
+    50% {
+        border-color: red;
+        box-shadow: red;
+    }
+    75% {
+        border-color: orange;
+        box-shadow: orange;
+    }
+    100% {
+        border-color: #FFD700;
+        box-shadow: #FFD700;
+    }
+}
+
+.text-clignotant {
+    animation: clignotant 1s infinite;
+}
+
+@keyframes clignotant {
+    0% { color: white; }
+    25% { color: yellow; }
+    50% { color: red; }
+    75% { color: orange; }
+    100% { color: orangered; }
+}
+
+/* Animation de zoom pour les symboles gagnants */
+.symbole-gagnant {
+    animation: zoomSymbole 0.75s ease-out forwards infinite;
+}
+
+
+@keyframes zoomSymbole {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out infinite;
+}
+
+button, .miser {
+    border-radius: 12px;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-3px);
+    }
+    50% {
+        transform: translateX(3px);
+    }
+    75% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateX(3px);
+    }
+}
+.show-overlay {
+    z-index: 1 !important;
+    opacity: 1 !important;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.show-winMessage {
+    z-index: 2 !important;
+    opacity: 1 !important;
+}
+
+
+#winMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    font-size: 30em;
+    font-family: 'Nova';
+    color:gold;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    user-select: none;
+    user-focus: none;
+}
+
+.boutonJouer:active{
+    transform: translateY(4px);
+}
+
+@media screen and (max-width:1250px) {
+    .containerBouton{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .containerParametre {
+        margin-top: 10px;
+    }
+    .item {
+        font-size: 200%;
+    }
+
+    .itemEcrit {
+        font-size: 200%;
+    }
+
+    .emplacement{
+        width: 142px;
+        height: 126px;
+        margin: 13px
+    }
+
+    .colonne {
+        width: 169px;
+        height: 430px;
+        margin: 10px;
+    }
+    #winMessage {
+        font-size: 20em;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    .item {
+        font-size: 150%;
+    }
+
+    .itemEcrit {
+        font-size: 150%;
+    }
+
+    .emplacement{
+        width: 126px;
+        height: 110px;
+        margin: 13px
+    }
+
+    .colonne {
+        width: 154px;
+        height: 385px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width:970px) {
+    .containerBoutonMise {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boutonJouer{
+        margin-top: 10px;
+    }
+
+    .boutonJouer{
+        align-items: center;
+    }
+}
+
+
+
+@media screen and (max-width:860px) {
+    .containerDonnée{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .containerJeu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .boutonJouer{
+        align-items: center;
+    }
+    .item {
+        font-size: 100%;
+    }
+
+    .itemEcrit {
+        font-size: 100%;
+    }
+
+    .emplacement{
+        width: 105px;
+        height: 100px;
+        margin: 13px;
+    }
+
+    .colonne {
+        width: 130px;
+        height: 350px;
+        margin: 10px;
+    }
+
+    .espace {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    .containerBouton{
+        margin-top: 10px;
+
+    }
+    .containerBoutonMise button, .containerBoutonMise button:hover{
+        font-size: 15px;
+    }
+    .miser{
+        font-size: 15px;
+    }
+    #winMessage {
+        font-size: 18em;
+    }
+}
+
+@media screen and (max-width:720px) {
+    #winMessage {
+        font-size: 15em;
+    }
+}
+
+@media screen and (max-width:610px) {
+    .containerMise {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .containerMiseMoins{
+        margin-top: 10px;
+    }
+    .miser{
+        display: none;
+    }
+    #winMessage {
+        font-size: 13em;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .containerJeu {
+        width: 100%;
+    }
+    .boutonJouer {
+        align-items: center;
+    }
+    .item {
+        font-size: 80%;
+    }
+
+    .itemEcrit {
+        font-size: 80%;
+    }
+
+    .emplacement{
+        width: 95px;
+        height: 100px;
+        margin: 11px
+    }
+
+    .colonne {
+        width: 120px;
+        height: 345px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width:590px) {
+    #winMessage {
+        font-size: 11em;
+    }
+}
+
+
